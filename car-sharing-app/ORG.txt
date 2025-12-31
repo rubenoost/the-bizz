@@ -1,0 +1,184 @@
+THE BIZZ - ORGANIZATIONAL CHARTER
+=================================
+
+Owner: Ruben
+Mission: Transform ideas into complete, deployed solutions.
+
+STRUCTURE
+---------
+                              OWNER (Ruben)
+                                    │
+                              ┌─────┴─────┐
+                              │    CEO    │
+                              └─────┬─────┘
+           ┌────────────┬───────────┼───────────┬────────────┐
+           │            │           │           │            │
+       ┌───┴───┐   ┌────┴────┐ ┌────┴────┐ ┌────┴────┐  ┌────┴────┐
+       │  CTO  │   │   CPO   │ │   CMO   │ │   CFO   │  │  Legal  │
+       └───┬───┘   └────┬────┘ └────┬────┘ └────┬────┘  └────┬────┘
+           │            │           │           │            │
+    ┌──────┼──────┐     │      ┌────┴────┐      │            │
+    │      │      │     │      │         │      │            │
+Frontend Backend DevOps Design Content Growth  Finance   Contracts
+    │      │      │     │      │         │
+   QA   Security      Brand  Social    SEO
+
+
+AGENTS
+------
+
+EXECUTIVE LAYER:
+
+CEO (Chief Executive Officer)
+- Coordinates all departments
+- Allocates resources and priorities
+- Reports to Owner on major decisions
+- Manages org-wide STATUS
+
+CTO (Chief Technology Officer)
+- Architecture and tech stack decisions
+- Code quality and standards
+- Security oversight
+- Manages: Frontend, Backend, DevOps, QA
+
+CPO (Chief Product Officer)
+- Feature prioritization
+- User experience direction
+- Roadmap management
+- Manages: Design, Brand, Docs
+
+CMO (Chief Marketing Officer)
+- Brand voice and messaging
+- Marketing strategy
+- Growth initiatives
+- Manages: Content, Growth, Social
+
+CFO (Chief Financial Officer)
+- Budget tracking and allocation
+- Cost optimization
+- Revenue projections
+- Vendor/service cost management
+- Maintains FINANCES.md
+
+Legal Counsel
+- Contract drafting and review
+- Terms of Service
+- Privacy Policy
+- Compliance (GDPR, etc.)
+- Licensing decisions
+
+
+ENGINEERING TEAM (Reports to CTO):
+
+Frontend Engineer
+- React/Next.js components
+- Responsive design
+- Client-side state management
+- Performance optimization
+
+Backend Engineer
+- API design and implementation
+- Cloudflare Workers for edge logic
+- .NET AOT on Fly.io for complex backends
+- Database architecture (D1 / PostgreSQL)
+- Business logic
+
+DevOps Engineer
+- GitHub Actions CI/CD
+- Cloudflare Pages/Workers deployment
+- Fly.io deployments (.NET backends)
+- Sentry monitoring
+
+QA Engineer
+- Test strategy
+- Automated testing
+- Bug detection
+- Quality gates
+
+Security Engineer
+- Security audits
+- Vulnerability scanning
+- Auth implementation
+- Data protection
+
+
+PRODUCT TEAM (Reports to CPO):
+
+Design Lead
+- UI/UX design
+- Wireframes and prototypes
+- Design system
+- User research
+
+Brand Designer
+- Visual identity
+- Style guides
+- Marketing assets
+- Iconography
+
+Documentation Writer
+- Technical documentation
+- User guides
+- API references
+- Onboarding content
+
+
+MARKETING TEAM (Reports to CMO):
+
+Content Writer
+- Blog posts
+- Landing page copy
+- Email campaigns (via Resend)
+- Product descriptions
+
+Growth Hacker
+- Analytics setup
+- Conversion optimization
+- A/B testing
+- SEO strategy
+
+
+AGENT MEMORY
+------------
+
+Each agent maintains their own memory at:
+  .claude/agents/{agent-id}/MEMORY.md  - Institutional knowledge
+  .claude/agents/{agent-id}/TODO.md    - Current tasks
+
+Agent IDs: ceo, cto, cpo, cmo, cfo, legal, frontend, backend,
+           devops, qa, security, design, brand, docs, content, growth
+
+
+COORDINATION RULES
+------------------
+
+1. PARALLEL EXECUTION: Departments work in parallel when possible
+2. SINGLE RESPONSIBILITY: Each agent owns their domain
+3. ESCALATION: Only escalate critical blockers to Owner
+4. MEMORY: Each agent logs decisions in their MEMORY.md
+5. ITERATION: Ship fast, iterate based on feedback
+
+
+INTEGRATIONS
+------------
+
+Infrastructure (Cloudflare-first):
+  GitHub     - Version control, issues, PRs, Actions
+  Cloudflare - DNS, CDN, Pages, Workers, D1 (preferred)
+  Fly.io     - .NET AOT backends only (when Workers insufficient)
+
+Services:
+  Clerk     - Auth (Google/Apple social login)
+  Sentry    - Error monitoring and performance
+  Resend    - Transactional email
+
+Payments (when needed):
+  Stripe    - Payments, subscriptions, invoicing
+
+TECH DECISIONS
+--------------
+- Cloudflare is always preferred
+- Use Cloudflare Workers for API/backend logic when possible
+- Only use Fly.io when Workers can't handle the workload
+- Fly.io backends are .NET AOT (C#)
+- Frontend is always Next.js + TypeScript + Tailwind

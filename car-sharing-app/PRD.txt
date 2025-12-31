@@ -1,0 +1,119 @@
+# Product Requirements Document: CarShare Tracker
+
+## Overview
+A free web app for small groups to fairly coordinate car sharing. Track rides, suggest drivers based on fairness, and schedule upcoming trips.
+
+## Problem Statement
+Groups who carpool (commuters, school runs, etc.) struggle to keep driving duties fair. Manual tracking is tedious, and there's no simple tool to coordinate who drives next.
+
+## Target User
+- Small groups (2-4 people) sharing regular rides
+- Commuters, parents doing school runs, friends carpooling
+- English-speaking markets
+- Word-of-mouth acquisition
+
+## Core Concepts
+
+### Fairness Algorithm
+Each member has a fairness ratio: `times_driven / (times_driven + times_passenger)`
+- Goal: Keep all members at the same ratio
+- Person with lowest ratio should drive next
+- Naturally handles part-timers (fewer rides = smaller denominator)
+- Drive multipliers allow weighting "expensive" drives (longer distance, bad traffic, etc.)
+
+### Honour System
+Users can override suggested drivers. Trust is implicit - you're sitting in the same car.
+
+## Features (MVP)
+
+### 1. Authentication
+- Google login
+- Apple login
+- No email/password (keep it simple)
+
+### 2. Groups
+- Create a group (becomes admin)
+- Invite via shareable link
+- Max 4 members per group (free tier)
+- Leave group functionality
+- Admin can remove members
+
+### 3. Routes
+- Create routes within a group (e.g., "Home to Office")
+- Max 2 routes per group (free tier)
+- Each route has:
+  - Name
+  - Origin label (e.g., "Home")
+  - Destination label (e.g., "Office")
+  - Multiplier (default 1.0, for weighting fairness)
+
+### 4. Recurring Rules
+- Define recurring rides on routes
+- Example: "Every weekday, Home → Office"
+- Days of week selection
+- Time of day
+- Generates ride slots in calendar
+
+### 5. Calendar & Signup
+- View next 7-14 days of upcoming rides
+- Members sign up for rides they can attend
+- See who else is signed up
+- System suggests fairest driver from signups
+- One-way signup allowed (morning only, afternoon only)
+
+### 6. Driver Suggestion
+- From signed-up members, suggest person with lowest fairness ratio
+- Display suggestion prominently
+- Allow manual override (any signed-up member can be selected)
+
+### 7. Ride Logging
+- After ride occurs, log:
+  - Date/time
+  - Route
+  - Driver (from group)
+  - Passengers (from group, multi-select)
+  - Optional: multiplier override
+- Any group member can log rides
+
+### 8. Dashboard
+- Per-member stats:
+  - Times driven
+  - Times as passenger
+  - Fairness ratio
+  - Trend (improving/declining)
+- Group fairness overview
+- "Who should drive next" indicator
+
+### 9. History
+- List of all past rides
+- Filter by date range, route, member
+- Shows driver, passengers, date, route
+
+## Non-Features (MVP)
+- No notifications/reminders
+- No mobile app (web only, mobile-responsive)
+- No payments/paid tier
+- No multiple groups per user (reconsider later)
+- No ride editing after logging (delete and re-add)
+
+## Future Paid Tier (Post-MVP)
+- More than 4 members per group
+- More than 2 routes per group
+- Email/push notifications
+- Advanced analytics
+
+## Technical Constraints
+- Budget: ~$20/month max
+- Stack: Next.js, Cloudflare Pages, D1, Clerk
+- Must work on mobile browsers
+
+## Success Metrics
+- Groups created
+- Rides logged
+- DAU/MAU
+- Retention (groups still active after 30 days)
+
+## Launch Strategy
+- Word-of-mouth only
+- English language only
+- No marketing spend

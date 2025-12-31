@@ -1,0 +1,35 @@
+PRODUCT REQUIREMENTS DOCUMENT
+=============================
+
+Status: AWAITING PRODUCT DEFINITION
+
+Use /discuss to define the product with the Owner.
+
+---
+
+PRODUCT NAME: [TBD]
+
+VISION:
+[What is the product and why does it exist?]
+
+TARGET USERS:
+[Who is this for?]
+
+CORE FEATURES:
+[List of must-have features]
+
+SUCCESS METRICS:
+[How do we measure success?]
+
+CONSTRAINTS:
+[Budget, timeline, technical limitations]
+
+---
+
+FEATURE BACKLOG:
+[Prioritized list of features to build]
+
+---
+
+CHANGELOG:
+[Updates to this document]
