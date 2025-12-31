@@ -23,7 +23,7 @@ All notable releases and deployments are documented here.
 
 ### Infrastructure
 - Directories: src/, docs/, design/, legal/, infra/
-- Agent memory: .claude/agents/*/
+- Agent memory: agent-docs/*/
 
 ---
 

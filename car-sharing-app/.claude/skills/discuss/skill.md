@@ -20,11 +20,11 @@ Read these files to understand current state:
 - `STATUS.md` - Org-wide progress overview
 - `PRD.txt` - Product requirements
 - `FINANCES.md` - Budget and costs
-- `.claude/agents/ceo/MEMORY.md` - Your memory
-- `.claude/agents/ceo/TODO.md` - Your tasks
+- `agent-docs/ceo/MEMORY.md` - Your memory
+- `agent-docs/ceo/TODO.md` - Your tasks
 
 Quickly scan other agent TODOs for detailed status:
-- `.claude/agents/*/TODO.md`
+- `agent-docs/*/TODO.md`
 
 ## Conversation Flow
 
@@ -52,8 +52,8 @@ After discussion, update:
 - `STATUS.md` - Update org-wide progress and milestones
 - `PRD.txt` - If product requirements changed
 - `FINANCES.md` - If budget/spending discussed
-- `.claude/agents/ceo/MEMORY.md` - Log key decisions
-- `.claude/agents/ceo/TODO.md` - Update your tasks
+- `agent-docs/ceo/MEMORY.md` - Log key decisions
+- `agent-docs/ceo/TODO.md` - Update your tasks
 - Other agent TODOs - Assign new tasks
 
 ## Tone

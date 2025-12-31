@@ -142,8 +142,8 @@ AGENT MEMORY
 ------------
 
 Each agent maintains their own memory at:
-  .claude/agents/{agent-id}/MEMORY.md  - Institutional knowledge
-  .claude/agents/{agent-id}/TODO.md    - Current tasks
+  agent-docs/{agent-id}/MEMORY.md  - Institutional knowledge
+  agent-docs/{agent-id}/TODO.md    - Current tasks
 
 Agent IDs: ceo, cto, cpo, cmo, cfo, legal, frontend, backend,
            devops, qa, security, design, brand, docs, content, growth

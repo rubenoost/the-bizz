@@ -15,8 +15,8 @@ Read these files to understand current state:
 - `STATUS.md` - Org-wide progress
 - `PRD.txt` - What to build
 - `FINANCES.md` - Budget constraints
-- `.claude/agents/ceo/MEMORY.md` - Your memory
-- `.claude/agents/ceo/TODO.md` - Organization priorities
+- `agent-docs/ceo/MEMORY.md` - Your memory
+- `agent-docs/ceo/TODO.md` - Organization priorities
 
 ## Execution Process
 
@@ -55,8 +55,8 @@ Task(subagent_type="design", prompt="Create the component design system. Read yo
 You are the {agent} agent for this organization.
 
 FIRST: Read your memory and todo:
-- `.claude/agents/{agent}/MEMORY.md`
-- `.claude/agents/{agent}/TODO.md`
+- `agent-docs/{agent}/MEMORY.md`
+- `agent-docs/{agent}/TODO.md`
 
 YOUR TASK: {specific task description}
 

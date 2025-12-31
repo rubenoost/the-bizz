@@ -34,4 +34,4 @@ Setting up organizational infrastructure. Awaiting product definition from Owner
 
 ---
 
-*CEO updates this file after major progress. For detailed agent status, see `.claude/agents/*/TODO.md`*
+*CEO updates this file after major progress. For detailed agent status, see `agent-docs/*/TODO.md`*
